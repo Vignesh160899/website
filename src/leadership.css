@@ -1,0 +1,175 @@
+/* Leadership Card Styles - Separate CSS File */
+
+/* Leadership Section Container */
+.leadership-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leadership-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.leadership-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.leadership-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Leadership Grid Layout */
+.leadership-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main Leadership Card */
+.leader-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+/* Hover Effects */
+.leader-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.leader-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Leader Avatar/Image */
+.leader-avatar {
+  width: 300px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 32px;
+  position: relative;
+  border: 3px solid #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.leader-avatar .leader-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.leader-card:hover .leader-photo {
+  transform: scale(1.05);
+}
+
+/* Leader Information */
+.leader-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+/* Typography */
+.leader-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b !important;
+  margin: 0;
+  opacity: 1 !important;
+  letter-spacing: -0.02em;
+}
+
+.leader-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3b82f6 !important;
+  margin: 0;
+  opacity: 1 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.leader-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #64748b !important;
+  margin: 0;
+  opacity: 1 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .leader-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+  
+  .leader-avatar {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .leader-info {
+    text-align: center;
+  }
+}
+
+/* Animation Classes */
+.leader-card.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.leader-card.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay Classes */
+.leader-card.delay-3 { transition-delay: 0.6s !important; }
+.leader-card.delay-4 { transition-delay: 0.8s !important; }
+.leader-card.delay-5 { transition-delay: 1.0s !important; }
