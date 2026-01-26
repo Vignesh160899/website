@@ -463,7 +463,7 @@ useEffect(() => {
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-link instagram zoom-out delay-4">
             <img src="/images/instagram-logo.svg" alt="Instagram" className="social-logo" />
           </a>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="social-link whatsapp zoom-out delay-5">
+          <a href="https://wa.me/7010744553" target="_blank" rel="noopener noreferrer" className="social-link whatsapp zoom-out delay-5">
             <img src="/images/whatsapp-logo.svg" alt="WhatsApp" className="social-logo" />
           </a>
           <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="social-link twitter zoom-out delay-6">
