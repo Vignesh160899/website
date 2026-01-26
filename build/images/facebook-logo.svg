@@ -1,0 +1,10 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="facebook-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1877f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e5fcc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#facebook-gradient)"/>
+  <path d="M68.5 128V78H84l2.5-18H68.5v-11.5c0-5.2 1.5-8.8 8.8-8.8H87V23c-1.5-.2-6.5-.5-12.3-.5-12.2 0-20.5 7.5-20.5 21v13.5H39V78h15.5v50h14z" fill="white"/>
+</svg>
