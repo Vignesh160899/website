@@ -204,10 +204,11 @@ const About = () => {
         <footer className="footer animate-on-scroll fade-up">
           <div className="footer-inner">
             <span className="footer-copy">
-              &copy; 2025 Shopy. All rights reserved.
+              &copy; 2026 Shopy. All rights reserved.
             </span>
             <div className="footer-links">
               <a href="/privacy" className="footer-link">Privacy Policy</a>
+              <span className="footer-link-separator"> | </span>
               <a href="/terms" className="footer-link">Terms of Service</a>
             </div>
           </div>

@@ -459,12 +459,13 @@ useEffect(() => {
       <footer className="footer">
         <div className="footer-inner">
           <span className="footer-copy">
-            &copy; 2025 Shopy. All rights reserved.
+            &copy; 2026 Shopy. All rights reserved.
           </span>
           <div className="footer-links">
             <button type="button" className="footer-link">
-              Privacy Policy
+              Privacy Policy 
             </button>
+            <span> | </span>
             <button type="button" className="footer-link">
               Terms of Service
             </button>
