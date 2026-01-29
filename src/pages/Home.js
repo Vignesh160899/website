@@ -462,12 +462,12 @@ useEffect(() => {
             &copy; 2025 Shopy. All rights reserved.
           </span>
           <div className="footer-links">
-            <a href="#" className="footer-link">
+            <button type="button" className="footer-link">
               Privacy Policy
-            </a>
-            <a href="#" className="footer-link">
+            </button>
+            <button type="button" className="footer-link">
               Terms of Service
-            </a>
+            </button>
           </div>
         </div>
       </footer>
