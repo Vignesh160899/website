@@ -260,10 +260,10 @@ const Contact = () => {
           <h3 className="zoom-out delay-1">Connect With Shopy</h3>
           <p className="social-media-subtitle zoom-out delay-2">Follow us on social media for updates, tips, and exclusive offers</p>
           <div className="social-media-links">
-            <a href="https://www.facebook.com/shopy" target="_blank" rel="noopener noreferrer" className="social-link facebook zoom-out delay-3" aria-label="Follow Shopy on Facebook">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social-link facebook zoom-out delay-3" aria-label="Follow Shopy on Facebook">
               <img src="/images/facebook-logo.svg" alt="Facebook" className="social-logo" />
             </a>
-            <a href="https://www.instagram.com/shopy" target="_blank" rel="noopener noreferrer" className="social-link instagram zoom-out delay-4" aria-label="Follow Shopy on Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-link instagram zoom-out delay-4" aria-label="Follow Shopy on Instagram">
               <img src="/images/instagram-logo.svg" alt="Instagram" className="social-logo" />
             </a>
             <a href="https://wa.me/917010744553" target="_blank" rel="noopener noreferrer" className="social-link whatsapp zoom-out delay-5" aria-label="Contact Shopy on WhatsApp">

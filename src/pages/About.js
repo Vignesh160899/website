@@ -186,10 +186,10 @@ const About = () => {
           <h3 className="fade-up delay-2">Connect With Shopy</h3>
           <p className="social-media-subtitle fade-up delay-3">Follow us on social media for updates, tips, and exclusive offers</p>
           <div className="social-media-links">
-            <a href="https://www.facebook.com/shopy" target="_blank" rel="noopener noreferrer" className="social-link facebook fade-up delay-4" aria-label="Follow Shopy on Facebook">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social-link facebook fade-up delay-4" aria-label="Follow Shopy on Facebook">
               <img src="/images/facebook-logo.svg" alt="Facebook" className="social-logo" />
             </a>
-            <a href="https://www.instagram.com/shopy" target="_blank" rel="noopener noreferrer" className="social-link instagram fade-up delay-5" aria-label="Follow Shopy on Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-link instagram fade-up delay-5" aria-label="Follow Shopy on Instagram">
               <img src="/images/instagram-logo.svg" alt="Instagram" className="social-logo" />
             </a>
             <a href="https://wa.me/7010744553" target="_blank" rel="noopener noreferrer" className="social-link whatsapp fade-up delay-6" aria-label="Contact Shopy on WhatsApp">
