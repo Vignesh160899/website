@@ -2971,7 +2971,8 @@ textarea {
 /* Footer */
 .footer {
   padding: 40px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border-top: none;
 }
 
 .footer-inner {
@@ -2985,7 +2986,7 @@ textarea {
 
 .footer-copy {
   font-size: 14px;
-  color: rgba(255, 255, 255);
+  color: #ffffff;
   margin: 0;
 }
 
@@ -2995,11 +2996,19 @@ textarea {
 }
 
 .footer-link {
-  color: rgba(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: color 0.2s ease;
   position: relative;
+}
+
+.footer-link:hover {
+  color: #cccccc;
 }
 
 .footer-link::after {
@@ -3011,10 +3020,6 @@ textarea {
   height: 1px;
   background: rgba(255, 255, 255, 0.8);
   transition: width 0.2s ease;
-}
-
-.footer-link:hover {
-  color: white;
 }
 
 .footer-link:hover::after {
