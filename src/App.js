@@ -8,7 +8,7 @@ import './styles.css';
 
 function App() {
   return (
-    <Router basename="/website">
+    <Router>
       <div className="app">
         <main>
           <Routes>
