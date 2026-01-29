@@ -1,32 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useCallback } from 'react';
 import '../styles.css';
 import FlippableCard from '../components/FlippableCard';
 import Navbar from '../components/Navbar';
 
-const sections = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'how-it-works', label: 'How it works' },
-];
 
 function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselRef = useRef(null);
-  
-  const images = [
-    'https://picsum.photos/seed/shopy-platform/400/400.jpg',
-    'https://picsum.photos/seed/shopy-delivery/400/400.jpg',
-    'https://picsum.photos/seed/shopy-stores/400/400.jpg'
-  ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
+  const nextImage = useCallback(() => {
+    // Image carousel functionality
+  }, []);
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   // Auto-slide every 3 seconds
   useEffect(() => {
@@ -35,7 +19,7 @@ function Home() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [nextImage]);
 
   // Auto-slide the USP cards carousel horizontally
   useEffect(() => {
@@ -478,12 +462,12 @@ useEffect(() => {
             &copy; 2025 Shopy. All rights reserved.
           </span>
           <div className="footer-links">
-            <a href="#" className="footer-link">
+            <button className="footer-link">
               Privacy Policy
-            </a>
-            <a href="#" className="footer-link">
+            </button>
+            <button className="footer-link">
               Terms of Service
-            </a>
+            </button>
           </div>
         </div>
       </footer>

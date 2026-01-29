@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import '../styles.css';
 import Navbar from '../components/Navbar';
 
@@ -18,11 +17,6 @@ styleElement.textContent = gradientAnimation;
 document.head.appendChild(styleElement);
 
 const HowItWorks = () => {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [navVisible, setNavVisible] = useState(true);
-  const [menuButtonVisible, setMenuButtonVisible] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
 
   // Force scroll to top immediately when component renders
   React.useLayoutEffect(() => {
@@ -53,39 +47,8 @@ const HowItWorks = () => {
     setTimeout(scrollToTop, 50);
     setTimeout(scrollToTop, 100);
     
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(() => {
-    let ticking = false;
-    
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            setNavVisible(false);
-            setMenuButtonVisible(false);
-          } else {
-            setNavVisible(true);
-            setMenuButtonVisible(true);
-          }
-          setLastScrollY(currentScrollY);
-          
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
 
   useEffect(() => {
     const animateOnScroll = () => {
@@ -135,42 +98,7 @@ const HowItWorks = () => {
     };
   }, []);
 
-  const handleNavClick = (target) => {
-    if (target === 'home') {
-      window.location.href = '/';
-      return;
-    }
-    if (target === 'about') {
-      window.location.href = '/about';
-      return;
-    }
-    const el = document.getElementById(target);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
-  const handleMenuNav = (path) => {
-    window.location.href = path;
-    setMenuOpen(false);
-  };
-
-  // Toggle body scroll lock
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${window.scrollY}px`;
-      document.body.style.width = '100%';
-    } else {
-      const scrollY = document.body.style.top;
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    }
-  }, [menuOpen]);
 
   return (
     <div className="page-root">
